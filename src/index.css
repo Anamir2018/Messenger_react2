@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'ArialMt';
+    src: url('./assets/fonts/arialmt.woff') format('woff');
+  }
+}
+.right-width-calc {
+  width: calc(100% - theme('spacing.14'));
+}
+.center-width-calc {
+  width: calc(100% - (theme('spacing.2021') + theme('spacing.2022')));
+}
+@media only screen and (max-width: 640px) {
+  .center-width-calc {
+    width: calc(100% - (theme('spacing.2021') + theme('spacing.14')));
+  }
+}
